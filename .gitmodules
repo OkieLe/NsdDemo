@@ -1,0 +1,3 @@
+[submodule "nsd"]
+	path = nsd
+	url = git@github.com:boopited/nsd.git
