@@ -12,12 +12,12 @@ import io.github.boopited.nsd.NsdServer
 
 class MainActivity : AppCompatActivity(), NsdServer.Callback, NsdClient.Callback {
 
-    private val serverStart: Button by lazy { findViewById(R.id.start_server) }
-    private val serverStop: Button by lazy { findViewById(R.id.stop_server) }
-    private val discoveryStart: Button by lazy { findViewById(R.id.start_discovery) }
-    private val discoveryStop: Button by lazy { findViewById(R.id.stop_discovery) }
+    private val serverStart: Button by lazy { findViewById<Button>(R.id.start_server) }
+    private val serverStop: Button by lazy { findViewById<Button>(R.id.stop_server) }
+    private val discoveryStart: Button by lazy { findViewById<Button>(R.id.start_discovery) }
+    private val discoveryStop: Button by lazy { findViewById<Button>(R.id.stop_discovery) }
 
-    private val asClient: CheckBox by lazy { findViewById(R.id.as_client) }
+    private val asClient: CheckBox by lazy { findViewById<CheckBox>(R.id.as_client) }
 
     private val nsdServer by lazy { NsdServer(this, SERVICE_NAME, SERVICE_TYPE, this) }
     private val nsdClient by lazy { NsdClient(this, SERVICE_TYPE, this) }
